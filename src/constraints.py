@@ -61,29 +61,29 @@ class Constraints:
 
 
     def equality_inequality_indx(self):
-    	""" Return the index of the equality constraints as well as the index of the inequality ones """
+        """ Return the index of the equality constraints as well as the index of the inequality ones """
 
-    	path_e_indx = np.array([], dtype=np.intc)
-    	path_i_indx = np.array([], dtype=np.intc)
+        path_e_indx = np.array([], dtype=np.intc)
+        path_i_indx = np.array([], dtype=np.intc)
 
-    	event_e_indx = np.array([], dtype=np.intc)
-    	event_i_indx = np.array([], dtype=np.intc)
+        event_e_indx = np.array([], dtype=np.intc)
+        event_i_indx = np.array([], dtype=np.intc)
 
-    	for k, (path_ct_l, path_ct_u) in enumerate(zip(self.problem.low_bnd.path, self.problem.upp_bnd.path)):
-    		
-    		if path_ct_l == path_ct_u:
-    			path_e_indx = np.append(path_e_indx, [k])
-    		else:
-    			path_i_indx = np.append(path_i_indx, [k])
+        for k, (path_ct_l, path_ct_u) in enumerate(zip(self.problem.low_bnd.path, self.problem.upp_bnd.path)):
+            
+            if path_ct_l == path_ct_u:
+                path_e_indx = np.append(path_e_indx, [k])
+            else:
+                path_i_indx = np.append(path_i_indx, [k])
 
-    	for k, (event_ct_l, event_ct_u) in enumerate(zip(self.problem.low_bnd.event, self.problem.upp_bnd.event)): 
+        for k, (event_ct_l, event_ct_u) in enumerate(zip(self.problem.low_bnd.event, self.problem.upp_bnd.event)): 
 
-    		if event_ct_l == event_ct_u:
-    			event_e_indx = np.append(event_e_indx, k)
-    		else:
-    			event_i_indx = np.append(event_i_indx, k)
+            if event_ct_l == event_ct_u:
+                event_e_indx = np.append(event_e_indx, k)
+            else:
+                event_i_indx = np.append(event_i_indx, k)
 
-    	return path_e_indx, path_i_indx, event_e_indx, event_i_indx
+        return path_e_indx, path_i_indx, event_e_indx, event_i_indx
 
 
     def build_eq_constraints_boundaries(self):

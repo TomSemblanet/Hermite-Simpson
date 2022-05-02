@@ -75,7 +75,7 @@ def retrieve_time_grid(h_vec, ti, tf):
 
     scaled_time_grid = scale_time(tm_grid, (ti, tf))
     return scaled_time_grid
-
+    
 
 def make_decision_variable_vector(states, controls, controls_col, ti, tf, prm, pb_prm):
     """ Packs the states, control, free parameters, initial and final time informations 

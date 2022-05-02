@@ -16,5 +16,5 @@ states = results['opt_st']
 keplerian_states = np.ndarray(shape=states.shape)
 
 for i in range(states.shape[1]):
-	keplerian_states[:, i] = eqnct2kep_avg(states[:, i])
+    keplerian_states[:, i] = eqnct2kep_avg(states[:, i])
 

@@ -47,16 +47,16 @@ keplerian_coord = np.array([SMA, ECC, INC, AOP, RAAN, TA])
 equinoctial_coord = kep2eqnct(np.array([SMA, ECC, INC, AOP, RAAN, TA]))
 
 
-	
+    
 # t_span = (0, ( 10 * 86400 ) / t_ref)
 
 # propagate = solve_ivp(fun=equinoctial_averaged_derivatives, t_span=t_span, y0=np.concatenate((equinoctial_coord[:-1], [mass])), \
-# 	method='RK45', args=(costates, Isp, T_max, delta, mu_scl, g0_scl), atol=1e-8, rtol=1e-8)
+#     method='RK45', args=(costates, Isp, T_max, delta, mu_scl, g0_scl), atol=1e-8, rtol=1e-8)
 
 # keplerian_results = np.ndarray(shape=(5, propagate.y.shape[1]))
 
 # for k, t in enumerate(propagate.t):
-# 	keplerian_results[:, k] = eqnct2kep_avg(propagate.y[:, k])
+#     keplerian_results[:, k] = eqnct2kep_avg(propagate.y[:, k])
 
 
 # KEP_PRM = ['SMA', 'ECC', 'INC', 'AOP', 'RAAN']
@@ -66,7 +66,7 @@ equinoctial_coord = kep2eqnct(np.array([SMA, ECC, INC, AOP, RAAN, TA]))
 # ax_K = fig.add_subplot(211)
 
 # for i in range(5):
-# 	ax_K.plot(propagate.t, keplerian_results[i], label='{}'.format(KEP_PRM[i]))
+#     ax_K.plot(propagate.t, keplerian_results[i], label='{}'.format(KEP_PRM[i]))
 
 # plt.title('Keplerian parameters')
 # plt.grid()
@@ -75,7 +75,7 @@ equinoctial_coord = kep2eqnct(np.array([SMA, ECC, INC, AOP, RAAN, TA]))
 # ax_E = fig.add_subplot(212)
 
 # for i in range(5):
-# 	ax_E.plot(propagate.t, propagate.y[i], label='{}'.format(EQN_PRM[i]))
+#     ax_E.plot(propagate.t, propagate.y[i], label='{}'.format(EQN_PRM[i]))
 
 # plt.title('Equinoctial parameters')
 # plt.grid()
