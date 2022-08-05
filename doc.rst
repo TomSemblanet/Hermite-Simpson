@@ -8,6 +8,8 @@ Optimal control problem definition
 
 As a reminder, in its generic form an optimal control problem is defined as follows:
 
+:math:`\\frac{1}{2}
+
 With N the number of phases, minimize the cost function:
 
 :math:`J = \sum_{i=1}^N \Phi_i(x(t_0), t_0, x(t_f), t_f; p) + \int_{t_0}^{t_f} \mathcal{L}_i(x(t), u(t), t; p) \mathrm{d}t `
