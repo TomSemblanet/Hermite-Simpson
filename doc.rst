@@ -8,7 +8,7 @@ Optimal control problem definition
 
 As a reminder, in its generic form an optimal control problem is defined as follows:
 
-:math:`\\frac{1}{2}
+:math:`\\frac{1}{2}`
 
 With N the number of phases, minimize the cost function:
 
