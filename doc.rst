@@ -186,9 +186,9 @@ where each value of the ``legendre_cost`` vector is the expression of the `\math
 
 
 Some simple examples are given : 
+
 - Minimization of the product of the :math:`1^{st}` final state and the :math:`2^{nd}` final control (using the Mayer cost method):
 :math:`\Phi(x(t_0), t_0, x(t_f), t_f; p) = x_1 * u_2` :
-
 .. code:: python
 
     mayer_cost = xf[0] * uf[1]
