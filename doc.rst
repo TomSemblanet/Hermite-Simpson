@@ -194,10 +194,12 @@ Some simple examples are given :
     mayer_cost = xf[0] * uf[1]
 
 - Minimization of the final time value (using the Mayer cost method): :math:`\Phi(x(t_0), t_0, x(t_f), t_f; p) = t_f` :
+
 .. code:: python
     mayer_cost = tf
 
 - Minimization of the total distance travelled (using the Legendre cost method): :math:`\int_{t_0}^{t_f} \dot{x}(t)^2 + \dot{y}(t)^2 \mathrm{d}t` :
+
 .. code:: python
     for k in range(N_nodes):
             legendre_cost[k] = states[0]**2 + states[1]**2
